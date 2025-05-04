@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorPalette</title>
+    <style>
+        body{
+            background-color: darksalmon;
+            width: 90%;
+            margin: 0 auto;
+        }
+      h1 {
+        margin-left: 20px;
+        text-decoration: underline;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 15px;
+      }
+      #colors{
+        background-color: #fff;
+      }
+      #whites{
+        background-color: darkcyan;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        height: 100px;
+        /* width: 100px; */
+        min-width: 100px;
+        text-align: center;
+        row-gap: 20px;
+      }
+    
+      th,td{
+        background-color: #fff;
+        font-size: large;
+      }
+      th{
+        font-size: 1.5rem;
+      }
+
+      #colors .row1 td:nth-child(1) {
+        background-color: aqua;
+      }
+      #colors .row1 td:nth-child(2){
+        background-color: aquamarine;
+      }
+      #colors .row1 td:nth-child(3){
+        background-color: black;
+        color: white;
+      }
+      #colors .row1 td:nth-child(4){
+        background-color: blue;
+        color: white;
+      }
+      #colors .row1 td:nth-child(5){
+        background-color: blueviolet;
+        color: white;
+      }
+      #colors .row2 td:nth-child(1){
+        background-color: brown;
+        color: white;
+      }
+      #colors .row2 td:nth-child(2){
+        background-color: burlywood;
+      }
+      #colors .row2 td:nth-child(3){
+        background-color: cadetblue;
+      }
+      #colors .row2 td:nth-child(4){
+        background-color: chartreuse;
+      }
+      #colors .row2 td:nth-child(5){
+        background-color: chocolate;
+      }
+      #colors .row3 td:nth-child(1){
+        background-color: coral;
+      }
+      #colors .row3 td:nth-child(2){
+        background-color: cornflowerblue;
+      }
+      #colors .row3 td:nth-child(3){
+        background-color: crimson;
+      }
+      #colors .row3 td:nth-child(4){
+        background-color: cyan;
+      }
+      #colors .row3 td:nth-child(5){
+        background-color: darkblue;
+        color: white;
+      }
+      #colors .row4 td:nth-child(1){
+        background-color: darkcyan;
+        color: white;
+      }
+      #colors .row4 td:nth-child(2){
+        background-color: darkgoldenrod;
+      }
+      #colors .row4 td:nth-child(3){
+        background-color: darkgrey;
+      }
+      #colors .row4 td:nth-child(4){
+        background-color: darkgreen;
+        color: white;
+      }
+      #colors .row4 td:nth-child(5){
+        background-color: darkkhaki;
+      }
+      #colors .row5 td:nth-child(1){
+        background-color: darkmagenta;
+        color: white;
+      }
+      #colors .row5 td:nth-child(2){
+        background-color: darkolivegreen;
+        color: white;
+      }
+      #colors .row5 td:nth-child(3){
+        background-color: darkorange;
+      }
+      #colors .row5 td:nth-child(4){
+        background-color: darkorchid;
+        color: white;
+      }
+      #colors .row5 td:nth-child(5){
+        background-color: darkred;
+        color: white;
+      }
+      #colors .row6 td:nth-child(1){
+        background-color: darksalmon;
+      }
+      #colors .row6 td:nth-child(2){
+        background-color: darkseagreen;
+      }
+      #colors .row6 td:nth-child(3){
+        background-color: darkslateblue;
+        color: white;
+      }
+      #colors .row6 td:nth-child(4){
+        background-color: darkslategrey;
+        color: white;
+      }
+      #colors .row6 td:nth-child(5){
+        background-color: darkturquoise;
+      }
+      #colors .row7 td:nth-child(1){
+        background-color: darkviolet;
+        color: white;
+      }
+      #colors .row7 td:nth-child(2){
+        background-color: deeppink;
+      }
+      #colors .row7 td:nth-child(3){
+        background-color: deepskyblue;
+      }
+      #colors .row7 td:nth-child(4){
+        background-color: dimgrey;
+        color: white;
+      }
+      #colors .row7 td:nth-child(5){
+        background-color: dodgerblue;
+      }
+      #colors .row8 td:nth-child(1){
+        background-color: firebrick;
+        color: white;
+      }
+      #colors .row8 td:nth-child(2){
+        background-color: forestgreen;
+        color: white;
+      }
+      #colors .row8 td:nth-child(3){
+        background-color: fuchsia;
+      }
+      #colors .row8 td:nth-child(4){
+        background-color: gold;
+      }
+      #colors .row8 td:nth-child(5){
+        background-color: goldenrod;
+      }
+      #colors .row9 td:nth-child(1){
+        background-color: grey;
+        color: white;
+      }
+      #colors .row9 td:nth-child(2){
+        background-color: green;
+        color: white;
+      }
+      #colors .row9 td:nth-child(3){
+        background-color: greenyellow;
+      }
+      #colors .row9 td:nth-child(4){
+        background-color: hotpink;
+      }
+      #colors .row9 td:nth-child(5){
+        background-color: indianred;
+      }
+      #colors .row10 td:nth-child(1){
+        background-color: indigo;
+        color: white;
+      }
+      #colors .row10 td:nth-child(2){
+        background-color: khaki;
+      }
+      #colors .row10 td:nth-child(3){
+        background-color: lawngreen;
+      }
+      #colors .row10 td:nth-child(4){
+        background-color: lightblue;
+      }
+      #colors .row10 td:nth-child(5){
+        background-color: lightcoral;
+      }
+      #colors .row11 td:nth-child(1){
+        background-color: lightgoldenrodyellow;
+      }
+      #colors .row11 td:nth-child(2){
+        background-color: lightgrey;
+      }
+      #colors .row11 td:nth-child(3){
+        background-color: lightgreen;
+      }
+      #colors .row11 td:nth-child(4){
+        background-color: lightpink;
+      }
+      #colors .row11 td:nth-child(5){
+        background-color: lightsalmon;
+      }
+      #colors .row12 td:nth-child(1){
+        background-color: lightseagreen;
+      }
+      #colors .row12 td:nth-child(2){
+        background-color: lightskyblue;
+      }
+      #colors .row12 td:nth-child(3){
+        background-color: lightslategrey;
+      }
+      #colors .row12 td:nth-child(4){
+        background-color: lightsteelblue;
+      }
+      #colors .row12 td:nth-child(5){
+        background-color: lightyellow;
+      }
+      #colors .row13 td:nth-child(1){
+        background-color: lime;
+      }
+      #colors .row13 td:nth-child(2){
+        background-color: limegreen;
+      }
+      #colors .row13 td:nth-child(3){
+        background-color: magenta;
+      }
+      #colors .row13 td:nth-child(4){
+        background-color: maroon;
+        color: white;
+      }
+      #colors .row13 td:nth-child(5){
+        background-color: mediumaquamarine;
+      }
+      #colors .row14 td:nth-child(1){
+        background-color: mediumblue;
+        color: white;
+      }
+      #colors .row14 td:nth-child(2){
+        background-color: mediumorchid;
+      }
+      #colors .row14 td:nth-child(3){
+        background-color: mediumpurple;
+      }
+      #colors .row14 td:nth-child(4){
+        background-color: mediumseagreen;
+      }
+      #colors .row14 td:nth-child(5){
+        background-color: mediumslateblue;
+      }
+      #colors .row15 td:nth-child(1){
+        background-color: mediumspringgreen;
+      }
+      #colors .row15 td:nth-child(2){
+        background-color: mediumturquoise;
+      }
+      #colors .row15 td:nth-child(3){
+        background-color: mediumvioletred;
+      }
+      #colors .row15 td:nth-child(4){
+        background-color: midnightblue;
+        color: white;
+      }
+      #colors .row15 td:nth-child(5){
+        background-color: moccasin;
+      }
+      #colors .row16 td:nth-child(1){
+        background-color: navajowhite;
+      }
+      #colors .row16 td:nth-child(1){
+        background-color: navy;
+        color: white;
+      }
+      #colors .row16 td:nth-child(2){
+        background-color: olive;
+        color: white;
+      }
+      #colors .row16 td:nth-child(3){
+        background-color: olivedrab;
+      }
+      #colors .row16 td:nth-child(4){
+        background-color: orange;
+      }
+      #colors .row16 td:nth-child(5){
+        background-color: orangered;
+      }
+      #colors .row17 td:nth-child(1){
+        background-color: orchid;
+      }
+      #colors .row17 td:nth-child(2){
+        background-color: palegoldenrod;
+      }
+      #colors .row17 td:nth-child(3){
+        background-color: palegreen;
+      }
+      #colors .row17 td:nth-child(4){
+        background-color: paleturquoise;
+      }
+      #colors .row17 td:nth-child(5){
+        background-color: palevioletred;
+      }
+      #colors .row18 td:nth-child(1){
+        background-color: peachpuff;
+      }
+      #colors .row18 td:nth-child(2){
+        background-color: peru;
+      }
+      #colors .row18 td:nth-child(3){
+        background-color: pink;
+      }
+      #colors .row18 td:nth-child(4){
+        background-color: plum;
+      }
+      #colors .row18 td:nth-child(5){
+        background-color: powderblue;
+      }
+      #colors .row19 td:nth-child(1){
+        background-color: purple;
+        color: white;
+      }
+      #colors .row19 td:nth-child(2){
+        background-color: rebeccapurple;
+        color: white;
+      }
+      #colors .row19 td:nth-child(3){
+        background-color: red;
+      }
+      #colors .row19 td:nth-child(4){
+        background-color: rosybrown;
+      }
+      #colors .row19 td:nth-child(5){
+        background-color: royalblue;
+        color: white;
+      }
+      #colors .row20 td:nth-child(1){
+        background-color: saddlebrown;
+        color: white;
+      }
+      #colors .row20 td:nth-child(2){
+        background-color: salmon;
+      }
+      #colors .row20 td:nth-child(3){
+        background-color: sandybrown;
+      }
+      #colors .row20 td:nth-child(4){
+        background-color: seagreen;
+      }
+      #colors .row20 td:nth-child(5){
+        background-color: sienna;
+        color: white;
+      }
+      #colors .row21 td:nth-child(1){
+        background-color: silver;
+      }
+      #colors .row21 td:nth-child(2){
+        background-color: skyblue;
+      }
+      #colors .row21 td:nth-child(3){
+        background-color: slateblue;
+      }
+      #colors .row21 td:nth-child(4){
+        background-color: slategrey;
+      }
+      #colors .row21 td:nth-child(5){
+        background-color: springgreen;
+      }
+      #colors .row22 td:nth-child(1){
+        background-color: steelblue;
+        color: white;
+      }
+      #colors .row22 td:nth-child(2){
+        background-color: tan;
+      }
+      #colors .row22 td:nth-child(3){
+        background-color: teal;
+      }
+      #colors .row22 td:nth-child(4){
+        background-color: thistle;
+      }
+      #colors .row22 td:nth-child(5){
+        background-color: tomato;
+      }
+      #colors .row23 td:nth-child(1){
+        background-color: turquoise;
+      }
+      #colors .row23 td:nth-child(2){
+        background-color: violet;
+      }
+      #colors .row23 td:nth-child(3){
+        background-color: wheat;
+      }
+      #colors .row23 td:nth-child(4){
+        background-color: yellow;
+      }
+      #colors .row23 td:nth-child(5){
+        background-color: yellowgreen;
+      }
+      /* remove this 1 */
+      #colors .row24 td:nth-child(1){
+        background-color: #fff;
+      }
+      #whites .row1 td:nth-child(1){
+        background-color: aliceblue;
+      }
+      #whites .row1 td:nth-child(2){
+        background-color: antiquewhite;
+      }
+      #whites .row1 td:nth-child(3){
+        background-color: azure;
+      }
+      #whites .row1 td:nth-child(4){
+        background-color: beige;
+      }
+      #whites .row1 td:nth-child(5){
+        background-color: bisque;
+      }
+      #whites .row2 td:nth-child(1){
+        background-color: blanchedalmond;
+      }
+      #whites .row2 td:nth-child(2){
+        background-color: cornsilk;
+      }
+      #whites .row2 td:nth-child(3){
+        background-color: floralwhite;
+      }
+      #whites .row2 td:nth-child(4){
+        background-color: gainsboro;
+      }
+      #whites .row2 td:nth-child(5){
+        background-color: ghostwhite;
+      }
+      #whites .row3 td:nth-child(1){
+        background-color: honeydew;
+      }
+      #whites .row3 td:nth-child(2){
+        background-color: ivory;
+      }
+      #whites .row3 td:nth-child(3){
+        background-color: lavender;
+      }
+      #whites .row3 td:nth-child(4){
+        background-color: lavenderblush;
+      }
+      #whites .row3 td:nth-child(5){
+        background-color: lemonchiffon;
+      }
+      #whites .row4 td:nth-child(1){
+        background-color: lightcyan;
+      }
+      #whites .row4 td:nth-child(2){
+        background-color: linen;
+      }
+      #whites .row4 td:nth-child(3){
+        background-color: mintcream;
+      }
+      #whites .row4 td:nth-child(4){
+        background-color: mistyrose;
+      }
+      #whites .row4 td:nth-child(5){
+        background-color: navajowhite;
+      }
+      #whites .row5 td:nth-child(1){
+        background-color: oldlace;
+      }
+      #whites .row5 td:nth-child(2){
+        background-color: papayawhip;
+      }
+      #whites .row5 td:nth-child(3){
+        background-color: seashell;
+      }
+      #whites .row5 td:nth-child(4){
+        background-color: snow;
+      }
+      #whites .row5 td:nth-child(5){
+        background-color: white;
+      }
+      #whites .row6 td:nth-child(1){
+        background-color: whitesmoke;
+      }
+    </style>
+    <script>
+      function init(){
+      const tables = document.getElementsByTagName("tbody");
+      // doesn't work, somehow tables is not known yet
+      // problem solved: window onload ... the page isn't loaded so elements aren't known yet
+      const firstTable = tables[0];
+      const secondTable = tables[1];
+
+        function printInfoToConsole(table){
+      for (let i = 0; i < table.rows.length; i++) {
+        console.log("----------------------------------------");
+        console.log(`Table Row #${i+1}: `, table.rows[i]);
+           for (let index = 0; index < table.rows[i].cells.length; index++) {
+        console.log(`Element 0${index+1}:`, table.rows[i].cells[index]);
+        console.log(`\t--\t Background-Color: ${window.getComputedStyle(table.rows[i].cells[index]).backgroundColor}`);
+        let bgc = window.getComputedStyle(table.rows[i].cells[index]).backgroundColor;
+        let a = bgc.substring(bgc.indexOf("(")+1, bgc.indexOf(","));
+        let b = bgc.substring(bgc.indexOf(",")+2, bgc.lastIndexOf(","));
+        let c = bgc.substring(bgc.lastIndexOf(",")+2, bgc.indexOf(")"));
+        let ae = Number(a).toString(16);
+        let be = Number(b).toString(16);
+        let ce = Number(c).toString(16);
+        ae = ae.length === 1? "0" + ae : ae;
+        be = be.length === 1? "0" + be : be;
+        ce = ce.length === 1? "0" + ce : ce;
+        let hex = "#".concat(ae).concat(be).concat(ce);
+        console.log(`\t--\t Hex-Value: `, hex);
+    }
+    console.log("----------------------------------------\n\n\n");
+}}
+    console.log("COLORS");
+    printInfoToConsole(firstTable);
+    console.log("WHITES");
+    printInfoToConsole(secondTable);
+
+    setTitles(firstTable);
+    setTitles(secondTable);
+    // testfunc(firstTable);
+
+    function setTitles(table){
+      // working with anonymous parameter ... it will never be recognised as an html element even if = an element
+      // still works even tho table is type: any -> tdCell type: any
+      for (let i = 0; i < table.rows.length; i++) {
+        for (let index = 0; index < table.rows[i].cells.length; index++) {
+          let tdCell = table.rows[i].cells[index];
+          let rgb = window.getComputedStyle(tdCell).backgroundColor;
+          let hex = toHex(rgb);
+          let replaceString = String(tdCell.outerHTML).replace("<td>", `<td title="${rgb.substring(0,3).toUpperCase()}: ${rgb.substring(3)}&#13;Hex: ${hex}">`);
+          tdCell.outerHTML = replaceString;
+          
+        }
+        
+      }
+
+    }
+    function testfunc(table){
+      //practice:
+      let el = table.rows[0].cells[1];
+        console.log(typeof el, el.outerHTML);
+        console.log(el)
+        let s = String(el.outerHTML).replace("<td>", `<td title="hello">`);
+        el.outerHTML = s;
+        //el is now modified and needs to be set again else you try to get bgc from the previous value of el
+        el = table.rows[0].cells[1];
+        console.log(`${window.getComputedStyle(el).backgroundColor}`);
+        //test
+        console.log(toHex(window.getComputedStyle(el).backgroundColor));
+        console.log(toHex("rgb(0, 0, 0)"));
+
+        //actual:
+          let elem = table.rows[0].cells[0];
+          console.log(elem.outerHTML, window.getComputedStyle(el).backgroundColor)
+          let rgb = window.getComputedStyle(elem).backgroundColor;
+          let hex = toHex(rgb);
+          let replaceString = String(elem.outerHTML).replace("<td>", `<td title="${rgb.substring(0,3).toUpperCase()}: ${rgb.substring(3)}&#13;Hex: ${hex}">`);
+          console.log(replaceString); //test
+          elem.outerHTML = replaceString; //overwrite
+    }
+
+    function toHex(bgc){
+      let hex1 = Number(bgc.substring(bgc.indexOf("(")+1, bgc.indexOf(","))).toString(16);
+        let hex2 = Number(bgc.substring(bgc.indexOf(",")+2, bgc.lastIndexOf(","))).toString(16);
+        let hex3 = Number(bgc.substring(bgc.lastIndexOf(",")+2, bgc.indexOf(")"))).toString(16);
+      let fullHex = "#".concat(hex1.length === 1?"0"+hex1:hex1)
+                       .concat(hex2.length === 1?"0"+hex2:hex2)
+                       .concat(hex3.length === 1?"0"+hex3:hex3);
+      return fullHex;
+    }
+      }
+window.onload = init;
+    </script>
+  </head>
+  <body>
+    <h1>ColorPalette</h1>
+  <div>
+    <table id="colors">
+      <thead>
+        <th colspan="5" style="text-decoration: underline; background-color: blanchedalmond;">C O L O R S</th>
+      </thead>
+      <tbody>
+        <tr class="row1">
+          <td>Aqua</td>
+          <td>Aquamarine</td>
+          <td>Black</td>
+          <td>Blue</td>
+          <td>Blueviolet</td>
+        </tr>
+        <tr class="row2">
+            <td title="brew &#13;&phone;&#13;brew">Brown</td>
+            <td>Burlywood</td>
+            <td>Cadetblue</td>
+            <td>Chartreuse</td>
+            <td>Chocolate</td>
+        </tr>
+        <tr class="row3">
+            <td>Coral</td>
+            <td>Cornflower<br>Blue</td>
+            <td>Crimson</td>
+            <td>Cyan</td>
+            <td>Darkblue</td>
+        </tr>
+        <tr class="row4">
+            <td>Darkcyan</td>
+            <td>Dark <br>Goldenrod</td>
+            <td>Darkgrey</td>
+            <td>Darkgreen</td>
+            <td>Dark <br> Khaki</td>
+        </tr>
+        <tr class="row5">
+            <td>Dark <br> Magenta</td>
+            <td>Dark <br>Olive <br>Green</td>
+            <td>Darkorange</td>
+            <td>Darkorchid</td>
+            <td>Darkred</td>
+        </tr>
+        <tr class="row6">
+            <td>Darksalmon</td>
+            <td>Dark <br>Sea <br>Green</td>
+            <td>Darkslate<br>Blue</td>
+            <td>Darkslate <br>Grey</td>
+            <td>Dark <br>Turquoise</td>
+        </tr>
+        <tr class="row7">
+            <td>Darkviolet</td>
+            <td>Deeppink</td>
+            <td>Deep<br>Skyblue</td>
+            <td>Dimgrey</td>
+            <td>Dodger <br>Blue</td>
+        </tr>
+        <tr class="row8">
+            <td>Firebrick</td>
+            <td>Forestgreen</td>
+            <td>Fuchsia</td>
+            <td>Gold</td>
+            <td>Goldenrod</td>
+        </tr>
+        <tr class="row9">
+            <td>Grey</td>
+            <td>Green</td>
+            <td>Green<br>Yellow</td>
+            <td>Hotpink</td>
+            <td>Indianred</td>
+        </tr>
+        <tr class="row10">
+            <td>Indigo</td>
+            <td>Khaki</td>
+            <td>Lawngreen</td>
+            <td>Lightblue</td>
+            <td>Lightcoral</td>
+        </tr>
+        <tr class="row11">
+            <td>Light <br>Goldenrod <br>Yellow</td>
+            <td>Lightgrey</td>
+            <td>Lightgreen</td>
+            <td>Lightpink</td>
+            <td>Lightsalmon</td>
+        </tr>
+        <tr class="row12">
+            <td>Light <br>Sea <br> Green</td>
+            <td>Light <br>Sky <br>Blue</td>
+            <td>Lightslate <br> Grey</td>
+            <td>Light <br>Steel <br>Blue</td>
+            <td>Lightyellow</td>
+        </tr>
+        <tr class="row13">
+            <td>Lime</td>
+            <td>Limegreen</td>
+            <td>Magenta</td>
+            <td>Maroon</td>
+            <td>Medium<br>Aquamarine</td>
+        </tr>
+        <tr class="row14">
+            <td>Medium <br>Blue</td>
+            <td>Medium <br>Orchid</td>
+            <td>Medium <br>Purple</td>
+            <td>Medium <br>Sea <br>Green</td>
+            <td>Medium <br>Slate <br>Blue</td>
+        </tr>
+        <tr class="row15">
+            <td>Medium <br>Spring <br>Green</td>
+            <td>Medium <br>Turquoise</td>
+            <td>Medium <br>Violet<br>Red</td>
+            <td>Midnight <br>Blue</td>
+            <td>Moccasin</td>
+        </tr>
+        <tr class="row16">
+            <td>Navy</td>
+            <td>Olive</td>
+            <td>Olivedrab</td>
+            <td>Orange</td>
+            <td>Orange<br>Red</td>
+        </tr>
+        <tr class="row17">
+            <td>Orchid</td>
+            <td>Pale <br>Goldenrod</td>
+            <td>Pale <br>Green</td>
+            <td>Pale <br>Turquoise</td>
+            <td>Pale <br>Violet <br>Red</td>
+        </tr>
+        <tr class="row18">
+            <td>Peachpuff</td>
+            <td>Peru</td>
+            <td>Pink</td>
+            <td>Plum</td>
+            <td>Powderblue</td>
+        </tr>
+        <tr class="row19">
+            <td>Purple</td>
+            <td>Rebecca<br>Purple</td>
+            <td>Red</td>
+            <td>Rosybrown</td>
+            <td>Royal <br>Blue</td>
+        </tr>
+        <tr class="row20">
+            <td>Saddle <br>Brown</td>
+            <td>Salmon</td>
+            <td>Sandy <br>Brown</td>
+            <td>Seagreen</td>
+            <td>Sienna</td>
+        </tr>
+        <tr class="row21">
+            <td>Silver</td>
+            <td>Skyblue</td>
+            <td>Slateblue</td>
+            <td>Slategrey</td>
+            <td>Spring <br>Green</td>
+        </tr>
+        <tr class="row22">
+            <td>Steel <br>Blue</td>
+            <td>Tan</td>
+            <td>Teal</td>
+            <td>Thistle</td>
+            <td>Tomato</td>
+        </tr>
+        <tr class="row23">
+            <td>Turquoise</td>
+            <td>Violet</td>
+            <td>Wheat</td>
+            <td>Yellow</td>
+            <td>Yellow <br>Green</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="div2" style="margin-top: 50px;">
+    <table id="whites">
+        <thead>
+            <th colspan="5" style="text-decoration: underline; background-color: blanchedalmond;">W H I T E S</th>
+        </thead>
+        <tbody>
+            <tr class="row1">
+                <td>Aliceblue</td>
+                <td>Antique <br>White</td>
+                <td>Azure</td>
+                <td>Beige</td>
+                <td>Bisque</td>
+            </tr>
+            <tr class="row2">
+                <td>Blanched <br>Almond</td>
+                <td>Cornsilk</td>
+                <td>Floralwhite</td>
+                <td>Gainsboro</td>
+                <td>Ghostwhite</td>
+            </tr>
+            <tr class="row3">
+                <td>Honeydew</td>
+                <td>Ivory</td>
+                <td>Lavender</td>
+                <td>Lavender<br>Blush</td>
+                <td>Lemon <br>Chiffon</td>
+            </tr>
+            <tr class="row4">
+                <td>Light <br>Cyan</td>
+                <td>Linen</td>
+                <td>Mintcream</td>
+                <td>Mistyrose</td>
+                <td>Navajo <br>White</td>
+            </tr>
+            <tr class="row5">
+                <td>Oldlace</td>
+                <td>Papaya <br>Whip</td>
+                <td>Seashell</td>
+                <td>Snow</td>
+                <td>White</td>
+            </tr>
+            <tr class="row6">
+                <td colspan="5">Whitesmoke</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  </body>
+</html>
